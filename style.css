@@ -1,0 +1,627 @@
+/* ===========================
+   VORTEX GAMES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* Fundo */
+
+.background{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at top,#6228ff55,transparent 35%),
+    radial-gradient(circle at bottom,#00c8ff33,transparent 45%),
+    #050505;
+
+}
+
+/* HEADER */
+
+header{
+
+    position:sticky;
+    top:0;
+
+    width:100%;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#090909dd;
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid #222;
+
+    z-index:999;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.logo i{
+
+    color:#00b7ff;
+
+    text-shadow:0 0 15px #00b7ff;
+
+}
+
+.logo strong{
+
+    color:#8b5cff;
+
+}
+
+/* MENU */
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+nav a:hover{
+
+    color:#00b7ff;
+
+}
+
+/* PESQUISA */
+
+.search{
+
+    display:flex;
+
+}
+
+.search input{
+
+    width:230px;
+
+    padding:12px;
+
+    border:none;
+
+    outline:none;
+
+    background:#121212;
+
+    color:white;
+
+    border-radius:10px 0 0 10px;
+
+}
+
+.search button{
+
+    border:none;
+
+    background:#00b7ff;
+
+    color:white;
+
+    width:55px;
+
+    border-radius:0 10px 10px 0;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.search button:hover{
+
+    background:#8b5cff;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:88vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    line-height:70px;
+
+    margin-bottom:25px;
+
+    background:linear-gradient(90deg,#00b7ff,#8b5cff);
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#ddd;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border-radius:40px;
+
+    background:linear-gradient(90deg,#00b7ff,#8b5cff);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    box-shadow:0 0 30px #00b7ff66;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 40px #8b5cff;
+
+}
+
+/* TITULOS */
+
+section h2{
+
+    font-size:36px;
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+/* CATEGORIAS */
+
+.categorias{
+
+    padding:90px 8%;
+
+}
+
+.grid-categorias{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.categoria{
+
+    background:#101010;
+
+    border:1px solid #222;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.categoria:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#00b7ff;
+
+    box-shadow:0 0 25px #00b7ff33;
+
+}
+
+.categoria i{
+
+    font-size:55px;
+
+    color:#00b7ff;
+
+    margin-bottom:15px;
+
+}
+
+.categoria span{
+
+    display:block;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+/* JOGOS */
+
+.games{
+
+    padding:90px 8%;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:#111;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid #222;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00b7ff;
+
+    box-shadow:0 0 25px #00b7ff55;
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    margin:18px;
+
+    font-size:24px;
+
+}
+
+.card span{
+
+    margin-left:18px;
+
+    color:#00b7ff;
+
+    font-weight:600;
+
+}
+
+.card a{
+
+    display:block;
+
+    margin:20px;
+
+    padding:14px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(90deg,#00b7ff,#8b5cff);
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.card a:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* SOBRE */
+
+.sobre{
+
+    padding:90px 8%;
+
+}
+
+.sobre-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#111;
+
+    border-radius:20px;
+
+    border:1px solid #222;
+
+    padding:50px;
+
+}
+
+.sobre-box p{
+
+    line-height:35px;
+
+    font-size:18px;
+
+    color:#ddd;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    padding:50px;
+
+    background:#090909;
+
+    border-top:1px solid #222;
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+.footer-logo i{
+
+    color:#00b7ff;
+
+}
+
+.social{
+
+    margin-top:25px;
+
+}
+
+.social a{
+
+    width:55px;
+
+    height:55px;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#151515;
+
+    border-radius:50%;
+
+    margin:8px;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    background:#00b7ff;
+
+    transform:translateY(-6px);
+
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#080808;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00b7ff;
+
+    border-radius:20px;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+line-height:50px;
+
+}
+
+.search input{
+
+width:180px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.hero{
+
+padding-top:80px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+line-height:42px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.search{
+
+width:100%;
+
+}
+
+.search input{
+
+width:100%;
+
+}
+
+}
+
+script.js
